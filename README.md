@@ -1,5 +1,7 @@
 # Stripe Multi-Environment Webhook Handler (SMEWH) 🌍💳
 
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adshrc/stripe-multi-environment-webhook-handler)
+
 Struggling to handle dev, staging, demo, and other environments with a single Stripe Test Environment? Here's an easy and flexible solution!
 
 This Cloudflare Worker forwards incoming Stripe webhook events to the appropriate environment based on the `returnUrl` included in the event's `metadata` property.
