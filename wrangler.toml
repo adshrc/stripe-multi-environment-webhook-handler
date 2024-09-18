@@ -1,0 +1,6 @@
+name = "my-worker"
+type = "javascript"
+main = "worker.js"
+
+account_id = "$$CF_ACCOUNT_ID"
+workers_dev = true
