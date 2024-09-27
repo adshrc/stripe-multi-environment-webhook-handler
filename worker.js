@@ -18,7 +18,7 @@
 
 export default {
   async fetch(request) {
-    // Stripe Webhook IPs
+    // Stripe Webhook IPs (https://stripe.com/files/ips/ips_webhooks.txt)
     const allowedIPs = [
       '3.18.12.63',
       '3.130.192.231',
@@ -63,8 +63,8 @@ export default {
       const headers = new Headers(requestClone.headers);
       
       // Check if both environment variables are set and add headers if they are
-      const clientId = env('CF_ACCESS_CLIENT_ID');
-      const clientSecret = env('CF_ACCESS_CLIENT_SECRET');
+      const clientId = env.CF_ACCESS_CLIENT_ID;
+      const clientSecret = env.CF_ACCESS_CLIENT_SECRET;
 
       if (clientId && clientSecret) {
         headers.set('CF-Access-Client-Id', clientId);
