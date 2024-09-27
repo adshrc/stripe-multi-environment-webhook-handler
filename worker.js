@@ -17,7 +17,7 @@
  */
 
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     // Stripe Webhook IPs (https://stripe.com/files/ips/ips_webhooks.txt)
     const allowedIPs = [
       '3.18.12.63',
