@@ -84,7 +84,7 @@ export default {
 
     } catch (error) {
       // Return a 202 to prevent retries in case of an error
-      return new Response('Event was discarded because of a processing error', { status: 202 });
+      return new Response('Event was discarded because of a processing error: ' + error, { status: 202 });
     }
   },
 };
