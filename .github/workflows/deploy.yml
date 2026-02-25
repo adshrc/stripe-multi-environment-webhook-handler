@@ -1,9 +1,8 @@
 name: SMEWH Worker Deployment
 on:
   push:
-  pull_request:
-  repository_dispatch:
-  workflow_dispatch:
+    branches:
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
