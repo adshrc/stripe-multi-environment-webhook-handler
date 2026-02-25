@@ -71,11 +71,14 @@ export default {
         headers.set('CF-Access-Client-Secret', clientSecret);
       }
 
+      // Buffer the body so it can be retransmitted on redirects
+      const body = await requestClone.arrayBuffer();
+
       // Forward the modified request with the appended headers
       const modifiedRequest = new Request(targetUrl, {
         method: requestClone.method,
         headers: headers,
-        body: requestClone.body,
+        body: body,
         redirect: 'follow',
       });
 
